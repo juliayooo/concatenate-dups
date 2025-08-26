@@ -29,6 +29,7 @@ with open(ouput_filepath, mode='w', newline='', encoding='ISO-8859-1') as out_fi
                 concat_desc += desc[0] + " "
             if len(afh) > 0 and (afh[0] not in concat_afh):
                 concat_afh += afh[0] + "; "
+                print(f"AFH: {afh[0]} | Concat: {concat_afh}")
             # concat_desc += str(str(data[data['Contact ID'] == c_id]['Description'].values[0]) + "\n")
             # concat_afh += str(str(data[data['Contact ID'] == c_id]['Relationship to AFH'].values[0]) + "\n")
             if merges[merges['Contact ID'] == c_id]['Primary Record'].values[0] == 'Primary Record' or merges[merges['Contact ID'] == c_id]['Primary Record'].values[0] == 1:
